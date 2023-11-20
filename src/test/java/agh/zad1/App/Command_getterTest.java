@@ -19,7 +19,7 @@ public class Command_getterTest {
 
     @Test
     public void get_command_list() throws WrongCommandException {
-        String input = "list";
+        String input = "LISt";
         InputStream in = new ByteArrayInputStream(input.getBytes());
         System.setIn(in);
         assertEquals(Valid_Commands.LIST, Command_getter.get_command());

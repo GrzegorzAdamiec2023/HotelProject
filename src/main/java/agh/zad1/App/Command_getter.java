@@ -16,7 +16,7 @@ public class Command_getter {
         Scanner scanner = new Scanner(System.in);
         while(true){
             System.out.print("\nPodaj komende:\n");
-            userCommand = scanner.nextLine();
+            userCommand = scanner.nextLine().toLowerCase();
 
             if (valid_commands.contains(userCommand.trim())){
                 break;
