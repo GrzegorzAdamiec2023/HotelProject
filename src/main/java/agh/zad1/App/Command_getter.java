@@ -8,7 +8,10 @@ public class Command_getter {
     private static ArrayList<String> valid_commands = new ArrayList<String>(Arrays.asList("exit", "list", "checkin", "checkout",
             "view"));
 
-    public static Valid_Commands get_command(){
+    private Command_getter(){
+        super();
+    }
+    public static Valid_Commands get_command() throws WrongCommandException {
         String userCommand;
         Scanner scanner = new Scanner(System.in);
         while(true){
@@ -22,23 +25,25 @@ public class Command_getter {
             }
         }
 
-        Valid_Commands out = Valid_Commands.exit;
+        Valid_Commands out = Valid_Commands.EXIT;
         switch (userCommand){
             case "exit":
-                out = Valid_Commands.exit;
                 break;
             case "checkout":
-                out = Valid_Commands.checkout;
+                out = Valid_Commands.CHECKOUT;
                 break;
             case "checkin":
-                out = Valid_Commands.checkin;
+                out = Valid_Commands.CHECKIN;
                 break;
             case "view":
-                out = Valid_Commands.view;
+                out = Valid_Commands.VIEW;
                 break;
             case "list":
-                out = Valid_Commands.list;
+                out = Valid_Commands.LIST;
                 break;
+            default:
+                throw new WrongCommandException("Podano złą komendę: " + userCommand);
+
         }
         return out;
     }

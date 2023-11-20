@@ -58,7 +58,7 @@ public class HotelTest {
     @Test
     public void view() throws ZaDuzoPokoiException {
         Hotel hotel = new Hotel(10, 64);
-        assertEquals("Pokoj na pietrze: 1 o numerze: 01\n" +
+        assertEquals("Pokój na piętrze: 1 o numerze: 01\n" +
                 " status: WOLNY\n", hotel.view("101"));
     }
 
@@ -66,8 +66,8 @@ public class HotelTest {
     public void checkin() throws ZaDuzoPokoiException {
         Hotel hotel = new Hotel(10, 64);
         hotel.checkin("101");
-        assertEquals("Pokoj na pietrze: 1 o numerze: 01\n" +
-                " status: ZAJETY\n", hotel.view("101"));
+        assertEquals("Pokój na piętrze: 1 o numerze: 01\n" +
+                " status: ZAJĘTY\n", hotel.view("101"));
 
     }
 
@@ -76,7 +76,7 @@ public class HotelTest {
         Hotel hotel = new Hotel(10, 64);
         hotel.checkin("101");
         hotel.checkout("101");
-        assertEquals("Pokoj na pietrze: 1 o numerze: 01\n" +
+        assertEquals("Pokój na piętrze: 1 o numerze: 01\n" +
                 " status: WOLNY\n", hotel.view("101"));
     }
 }

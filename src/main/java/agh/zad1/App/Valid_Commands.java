@@ -1,9 +1,9 @@
 package agh.zad1.App;
 
 public enum Valid_Commands {
-    exit,
-    list,
-    checkin,
-    checkout,
-    view
+    EXIT,
+    LIST,
+    CHECKIN,
+    CHECKOUT,
+    VIEW
 }

@@ -1,4 +1,4 @@
-package agh.zad1;
+package agh.zad1.MyMap;
 
 import agh.zad1.MyMap.MyMap;
 import org.junit.Test;

@@ -18,10 +18,10 @@ public class MyMap<K, V>{
     public void put(K key, V value) {
         int index = keys.indexOf(key);
         if (index != -1) {
-            // Jeżeli klucz już istnieje, zaktualizuj wartość
+
             values.set(index, value);
         } else {
-            // Dodaj nowy klucz i wartość
+
             keys.add(key);
             values.add(value);
         }
@@ -47,9 +47,7 @@ public class MyMap<K, V>{
         }
     }
 
-    // Pozostałe metody interfejsu Map mogą być zaimplementowane według potrzeb
 
-    // Przykładowa metoda clear() do wyczyszczenia mapy
     public void clear() {
         keys.clear();
         values.clear();

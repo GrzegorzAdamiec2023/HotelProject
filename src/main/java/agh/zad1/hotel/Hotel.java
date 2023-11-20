@@ -8,6 +8,7 @@ public class Hotel {
     private final int pietra;
     private final int pokoje;
 
+    private final String pokojNieIstnieje = "Podany pokój nie istnieje, sprobój ponownie.";
     public Hotel(int pietra, int pokoje) throws ZaDuzoPokoiException {
         if(pokoje > 100){
             String pokojeStr = Integer.toString(pokoje);
@@ -61,7 +62,7 @@ public class Hotel {
         }
 
         if (!this.is_in_shemat_pokoi(key)){
-            return "Podany pokój nie istnieje, sprobój ponownie.";
+            return this.pokojNieIstnieje;
         }
 
 
@@ -88,7 +89,7 @@ public class Hotel {
         }
 
         if (!this.is_in_shemat_pokoi(key)){
-            return "Podany pokój nie istnieje, sprobój ponownie.";
+            return this.pokojNieIstnieje;
         }
 
         if (this.shemat_pokoi.get(key)){
@@ -109,7 +110,7 @@ public class Hotel {
         }
 
         if (!this.is_in_shemat_pokoi(key)){
-            return "Podany pokój nie istnieje, sprobój ponownie.";
+            return this.pokojNieIstnieje;
         }
 
         if (!this.shemat_pokoi.get(key)){
